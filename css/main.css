@@ -43,3 +43,138 @@ h3 {
   margin: 0;
 }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:  0 1em;
+}
+
+header  .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  width: 120px;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+header nav a {
+  display: inline-block;
+  background-color: #F54F95;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  margin-left: 1em;
+  border: 1px solid #F54F95;
+}
+
+header nav a:hover,
+header nav:focus {
+  background-color: white;
+  color: #F54F95;
+}
+
+#hero {
+  height: 60vh;
+  background-color: #F54F95;
+  background-image: url(../images/hero-donuts.jpg);
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  padding: 4em 0;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+} 
+
+.product-card {
+  border-radius: 14px;
+  padding: 2em 1.25em;
+  text-align: center;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card:nth-child(1){
+  background-color: #e17292;
+}
+
+.product-card:nth-child(2){
+  background-color: #c78e62;
+}
+
+.product-card:nth-child(3){
+  background-color: #f1ad2c;
+}
+
+.product-card:nth-child(4){
+  background-color: #2cd39c;
+}
+
+.product-card p {
+  margin: 5em 0;
+}
+
+.product-card p.price {
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+.product-card button {
+  background-color: #fff;
+  color: #F54F95;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 20px;
+  padding: .5em 1.5em;
+  cursor: pointer;
+
+  margin-top: auto;
+}
+
+.product-card button:hover,
+.product-card button:focus {
+  background-color: #F54F95;
+  color: #fff;
+}
+
+footer {
+  background-color: #F54F95;
+  padding: .5em 0;
+  text-align: center;
+  color: #fff;
+}
+
+@media (min-width: 37.5em){
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (min-width: 67.5em) {
+  product-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
